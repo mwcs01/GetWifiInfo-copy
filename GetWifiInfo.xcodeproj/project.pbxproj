@@ -24,6 +24,7 @@
 		305E855C2105A1D7003E9792 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		305E855F2105A1D7003E9792 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		305E85612105A1D7003E9792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305E856A2105AFDC003E9792 /* GetWifiInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GetWifiInfo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 			children = (
 				305E85512105A1C4003E9792 /* GetWifiInfo */,
 				305E85502105A1C4003E9792 /* Products */,
+				305E85672105AFDC003E9792 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +58,7 @@
 		305E85512105A1C4003E9792 /* GetWifiInfo */ = {
 			isa = PBXGroup;
 			children = (
+				305E856A2105AFDC003E9792 /* GetWifiInfo.entitlements */,
 				305E85522105A1C4003E9792 /* AppDelegate.swift */,
 				305E85542105A1C4003E9792 /* ViewController.swift */,
 				305E85562105A1C4003E9792 /* Main.storyboard */,
@@ -65,6 +68,13 @@
 				305E85592105A1C4003E9792 /* GetWifiInfo.xcdatamodeld */,
 			);
 			path = GetWifiInfo;
+			sourceTree = "<group>";
+		};
+		305E85672105AFDC003E9792 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +109,27 @@
 				TargetAttributes = {
 					305E854E2105A1C4003E9792 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.HotspotConfiguration = {
+								enabled = 0;
+							};
+							com.apple.Multipath = {
+								enabled = 0;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 0;
+							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -284,6 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GetWifiInfo/GetWifiInfo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62KBMLS53A;
 				INFOPLIST_FILE = GetWifiInfo/Info.plist;
@@ -293,7 +325,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.midwestcompsol.GetWifiInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -302,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GetWifiInfo/GetWifiInfo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62KBMLS53A;
 				INFOPLIST_FILE = GetWifiInfo/Info.plist;
@@ -311,7 +344,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.midwestcompsol.GetWifiInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
